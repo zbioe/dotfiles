@@ -1,0 +1,7 @@
+[user]
+	name = Iury Fukuda
+	email = iuryfukuda@gmail.com
+	username = iuryfukuda
+[core]
+	editor = emacs -nw
+	excludesfile = ~/.gitignore
