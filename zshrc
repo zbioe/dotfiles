@@ -1,14 +1,18 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Aliases
-source $HOME/.aliases.d/*.sh
-
 # Enable XON/XOFF flow control
 stty -ixon
 
-# Profile
-source $HOME/.profile.d/*.sh
+# Aliases
+for f in $HOME/.aliases.d/*.sh; do
+	source $f
+done
+
+# Profiles
+for f in $HOME/.profile.d/*.sh; do
+    source $f
+done
 
 # Key Map
 setxkbmap -model abnt2 -layout br -variant abnt2 -option ctrl:swapcaps
