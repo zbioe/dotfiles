@@ -1,6 +1,6 @@
 #!/bin/sh
 
-NASH=$HOME/nash
-NASHROOT=$HOME/nashroot
+NASH=$HOME/nashpath
+NASHROOT=$HOME/nash
 
 export PATH=$PATH:$NASHROOT/bin:$NASH/bin
