@@ -18,7 +18,7 @@ done
 bindkey -e
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME=dogenpunk
+ZSH_THEME=clean
 
 # auto-update (in days).
 export UPDATE_ZSH_DAYS=26
