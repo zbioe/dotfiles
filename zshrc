@@ -14,9 +14,6 @@ for f in $HOME/.profile.d/*.sh; do
     source $f
 done
 
-# Key Map
-setxkbmap -model abnt2 -layout br -variant abnt2 -option ctrl:swapcaps
-
 # Sure about emacs mode
 bindkey -e
 
