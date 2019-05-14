@@ -4,13 +4,14 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(global-font-lock-mode 0)
+
 (package-initialize)
 
 (scroll-bar-mode -1) ; remove scroll bar
 (menu-bar-mode -1) ; remove menu bar
 (tool-bar-mode -1) ; remove tool bar
 (set-fringe-mode 0) ; Remove border
+;; (global-font-lock-mode 0) ; remove color
 
 (setq vc-follow-symlinks t) ; Allways follow the links
 
@@ -63,3 +64,11 @@
 
 (global-set-key (kbd "C-c w") 'copy-to-clipboard)
 (global-set-key (kbd "C-c y") 'paste-from-clipboard)
+
+# Google translate
+
+(setq google-translate-default-source-language "en")
+(setq google-translate-default-target-language "pt")
+
+(global-set-key "\C-ct" 'google-translate-at-point)
+(global-set-key "\C-cT" 'google-translate-query-translate)

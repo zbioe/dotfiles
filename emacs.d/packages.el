@@ -30,8 +30,8 @@
 	;; python
 	python-mode
 
-	;; nash
-	nash-mode
+	;; fish
+	fish-mode
 
 	;; erlang
 	erlang

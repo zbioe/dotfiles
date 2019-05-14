@@ -1,11 +1,11 @@
 #!/bin/sh
 set -e
 
-DOTFILES="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+BASEDIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
 
 make_link(){
     rpath=$1
-    src=${DOTFILES}/$rpath
+    src=${BASEDIR}/$rpath
     path=${HOME}/.${rpath}
     bkp=${path}.bkp
     if [ -s $bkp ]; then
@@ -20,8 +20,7 @@ make_link(){
 make_link tmux.conf
 make_link zshrc
 make_link emacs.d
-make_link aliases.d
+make_link bin
 make_link gitignore
 make_link gitconfig
 make_link profile.d
-make_link kitty
