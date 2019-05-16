@@ -65,7 +65,7 @@
 (global-set-key (kbd "C-c w") 'copy-to-clipboard)
 (global-set-key (kbd "C-c y") 'paste-from-clipboard)
 
-# Google translate
+; Google translate
 
 (setq google-translate-default-source-language "en")
 (setq google-translate-default-target-language "pt")
