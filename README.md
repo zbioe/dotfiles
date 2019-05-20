@@ -1,8 +1,6 @@
 # Dotfiles
 
-### Create aliases
+### Install
 ```sh
-git clone git@github.com:iuryfukuda/dotfiles.git
-cd dotfiles
-make aliases
+make install
 ```
