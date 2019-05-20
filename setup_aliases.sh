@@ -1,4 +1,5 @@
 #!/bin/sh
+
 set -e
 
 BASEDIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
@@ -18,9 +19,6 @@ make_link(){
 }
 
 make_link tmux.conf
-make_link zshrc
 make_link emacs.d
-make_link bin
 make_link gitignore
 make_link gitconfig
-make_link profile.d

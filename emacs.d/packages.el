@@ -8,41 +8,25 @@
 
 ; list the packages you want
 (setq package-list '(
-	magit
 	markdown-mode
 
-	;; json
-	json-mode
-
-	;; csv
-	csv-mode
-
-	;; docker
 	dockerfile-mode
 
-	;; elixir
 	elixir-mode
 	alchemist
 
-	;; doc
 	zeal-at-point
 
-	;; python
 	python-mode
 
-	;; fish
 	fish-mode
 
-	;; erlang
 	erlang
 
-	;; go-lang
 	go-mode
 
-	;; haskell
 	haskell-mode
 	hindent
-
 	))
 
 ; activate all the packages

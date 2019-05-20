@@ -72,3 +72,17 @@
 
 (global-set-key "\C-ct" 'google-translate-at-point)
 (global-set-key "\C-cT" 'google-translate-query-translate)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (hindent haskell-mode go-mode erlang fish-mode python-mode zeal-at-point alchemist elixir-mode dockerfile-mode markdown-mode))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
