@@ -7,10 +7,10 @@
 
 (package-initialize)
 
-(scroll-bar-mode -1) ; remove scroll bar
+;; (scroll-bar-mode -1) ; remove scroll bar
 (menu-bar-mode -1) ; remove menu bar
-(tool-bar-mode -1) ; remove tool bar
-(set-fringe-mode 0) ; Remove border
+;; (tool-bar-mode -1) ; remove tool bar
+;; (set-fringe-mode 0) ; Remove border
 ;; (global-font-lock-mode 0) ; remove color
 
 (setq vc-follow-symlinks t) ; Allways follow the links
