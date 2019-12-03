@@ -1,0 +1,8 @@
+#!/usr/bin/env fish
+
+if pgrep tmux
+    st -e tmux a
+    exit 0
+end
+st -e tmux
+exit 0
