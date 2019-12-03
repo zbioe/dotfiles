@@ -2,23 +2,19 @@
 
 set -e
 
-BASEDIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
-
 make_link(){
-    rpath=$1
-    src=${BASEDIR}/$rpath
-    path=${HOME}/.${rpath}
-    bkp=${path}.bkp
-    if [ -s $bkp ]; then
-	rm -Rf $bkp
-    fi
-    if [ -s $path ]; then
-	mv $path $bkp
-    fi
-    ln -sf $src $path
+    src=$1
+    dest=$2
+    [ -s $dest ] && rm -r $dest
+    ln -sf $src $dest
 }
 
-make_link tmux.conf
-make_link emacs.d
-make_link gitignore
-make_link gitconfig
+make_link $(pwd)/tmux.conf ~/.tmux.conf
+make_link $(pwd)/emacs.d ~/.emacs.d
+make_link $(pwd)/gitignore ~/.gitignore
+make_link $(pwd)/gitconfig ~/.gitconfig
+make_link $(pwd)/i3 ~/.config/i3
+make_link $(pwd)/fish ~/.config/fish
+make_link $(pwd)/bin ~/bin
+
+echo "aliases created"
