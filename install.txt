@@ -1,0 +1,58 @@
+# Update System
+xbps-install -Su
+
+# Install Xorg
+xbps-install -S xorg-minimal xorg-fonts
+
+# Install i3 and basic dependences
+xbps-install -S i3 i3lock i3status dmenu st
+## At this point you can put 'exec i3' in ~/.xinitrc and use i3
+
+# Install dbus and consolekit2
+xbps-install -S ConsoleKit2 dbus dbus-x11
+
+# Install video dependences
+xbps-install -S xf86-input-evdev xf86-video-intel xf86-video-vesa  xf86-video-fbdev
+
+# Add xinitrc: 
+exec ck-launch-session dbus-launch --sh-syntax --exit-with-x11 i3
+
+# Add .bash_profile for autostart x at login 
+[ -z $DISPLAY ] && [ $(tty) == /dev/tty1 ] && startx
+
+# Remove beep
+rmmod pcspkr
+echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
+
+# Install Audio
+xbps-install -S alsa-utils pulseaudio alsa-plugins-pulseaudio pavucontrol
+ln -s /etc/sv/dbus /var/service/
+ln -s /etc/sv/alsa /var/service/
+ln -s /etc/sv/cgmanager /var/service/
+ln -s /etc/sv/consolekit /var/service/
+ln -s /etc/sv/pulseaudio /var/service/
+usermod -a -G audio $USER
+usermod -a -G pulse-access $USER
+sv up dbus
+
+# Install bluetooth
+rfkill unblock bluetooth
+xbps-install -S bluez
+
+ln -s /etc/sv/bluetoothd /var/service/
+usermod -a -G bluetooth $USER
+sv restart dbus
+
+# Install initial programs
+xbps-install -S neovim firefox setxkbmap curl unzip xsel jq
+
+# Install Extras
+xbps-install -Sy void-repo-nonfree && xbps-install -Sy void-repo-multilib && xbps-install -Suv
+xbps-install -S skype qbittorrent vlc
+
+# Install Control Video
+xbps-install -S brightnessctl
+
+# Configure Dotfiles
+xbps-install -S make git tmux emacs fish
+
