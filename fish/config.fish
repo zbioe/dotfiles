@@ -1,7 +1,7 @@
 # unset fish greeting
 set fish_greeting
 
-# auto start fish on login
+# auto start x on login
 if status is-login
     if test -z "$DISPLAY" -a $XDG_VTNR = 1
         exec startx -- -keeptty
