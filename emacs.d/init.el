@@ -7,11 +7,14 @@
 
 (package-initialize)
 
-;; (scroll-bar-mode -1) ; remove scroll bar
 (menu-bar-mode -1) ; remove menu bar
-;; (tool-bar-mode -1) ; remove tool bar
-;; (set-fringe-mode 0) ; Remove border
 ;; (global-font-lock-mode 0) ; remove color
+
+;; some graphic configs
+(when (display-graphic-p)
+  (scroll-bar-mode -1) ; remove scroll bar
+  (tool-bar-mode -1) ; remove tool bar
+  (set-fringe-mode 0)) ; Remove border
 
 (setq vc-follow-symlinks t) ; Allways follow the links
 
@@ -21,12 +24,13 @@
 ;; Package
 (load-file "~/.emacs.d/packages.el")
 
-;; Keys
+;; Some changes in default keys
 (global-set-key (kbd "C-?") 'help-command)
-(global-set-key (kbd "M-?") 'mark-paragraph)
+(global-set-key (kbd "M-s") 'mark-paragraph)
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "M-h") 'backward-kill-word)
 
+;; Keys for move in panels
 (global-set-key (kbd "C-c b")  'windmove-left)
 (global-set-key (kbd "C-c f") 'windmove-right)
 (global-set-key (kbd "C-c p")    'windmove-up)
@@ -36,8 +40,12 @@
 (global-set-key "\C-cd" 'zeal-at-point)
 
 ;; ido-mode on (buffer manager)
-(ido-mode 1)
+;; (ido-mode 1)
+;; (setq ido-enable-flex-matching t)
+;; (setq ido-everywhere t)
 
+
+;; Copy and paste from X clipboard
 
 (defun copy-to-clipboard ()
   (interactive)
@@ -67,11 +75,3 @@
 
 (global-set-key (kbd "C-c w") 'copy-to-clipboard)
 (global-set-key (kbd "C-c y") 'paste-from-clipboard)
-
-; Google translate
-
-(setq google-translate-default-source-language "en")
-(setq google-translate-default-target-language "pt")
-
-(global-set-key "\C-ct" 'google-translate-at-point)
-(global-set-key "\C-cT" 'google-translate-query-translate)
