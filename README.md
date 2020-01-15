@@ -1,8 +1,8 @@
 # Dotfiles
 
-## Dependences
+## Requirements
 
-make xsel tmux emacs fish-shell i3 slock i3status dmenu feh 
+make emacs tmux i3 slock i3status dmenu xsel feh fish-shell 
 
 ## Install
 

@@ -186,6 +186,8 @@ bindsym $mod+Shift+o exec sudo -E brightnessctl set 5%- # decrease screen bright
 
 
 # Assign class to workspace
+assign [class="jetbrains-studio"] $ws1
+assign [class="emacs"] $ws1
 assign [class="st-256color"] $ws0
 assign [class="Chromium"] $ws2
 assign [class="Firefox"] $ws6
