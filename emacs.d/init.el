@@ -1,3 +1,4 @@
+
 ;; Botstrap
 
 ;; Added by Package.el.  This must come before configurations of
@@ -11,12 +12,26 @@
 ;; (global-font-lock-mode 0) ; remove color
 
 ;; some graphic configs
-(when (display-graphic-p)
-  (scroll-bar-mode -1) ; remove scroll bar
-  (tool-bar-mode -1) ; remove tool bar
-  (set-fringe-mode 0)) ; Remove border
+(defun graphic-config (&optional frame)
+  (unless frame                                                 
+    (setq frame (selected-frame)))
+  (with-selected-frame frame
+    (when (display-graphic-p)
+      (scroll-bar-mode -1) ; remove scroll bar
+      (tool-bar-mode -1) ; remove tool bar
+      (set-fringe-mode 0)))) ; remove border
+
+;; add graphic configs if is window-system mode
+(graphic-config) ;; without --daemon
+(add-hook 'after-make-frame-functions 'graphic-config) ;; with daemon mode
 
 (setq vc-follow-symlinks t) ; Allways follow the links
+
+;; Remove startup message
+(custom-set-variables
+ '(inhibit-startup-screen t))
+(custom-set-faces
+ )
 
 ;; Theme
 (load-theme 'dichromacy)
