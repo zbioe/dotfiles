@@ -94,6 +94,7 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
+set $ws0 "0"
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -103,9 +104,9 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
 
 # switch to workspace
+bindsym $mod+0 workspace $ws0
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -115,9 +116,9 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
+bindsym $mod+Shift+0 move container to workspace $ws0
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -127,7 +128,6 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -164,7 +164,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # screen locker
-bindsym $mod+Shift+b exec i3lock --color 326109
+bindsym --release $mod+Shift+b exec slock
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -172,7 +172,7 @@ bar {
         status_command i3status
 }
 
-# no border
+# No border
 for_window [class="^.*"] border pixel 0
 
 # Pulse Audio controls
@@ -183,3 +183,14 @@ bindsym $mod+Shift+m exec --no-startup-id amixer set Master toggle # mute sound
 # Sreen brightness controls
 bindsym $mod+Shift+p exec sudo -E brightnessctl set +5% # increase screen brightness
 bindsym $mod+Shift+o exec sudo -E brightnessctl set 5%- # decrease screen brightness
+
+
+# Assign class to workspace
+assign [class="st-256color"] $ws0
+assign [class="Chromium"] $ws2
+assign [class="Firefox"] $ws6
+assign [class="Steam"] $ws9
+
+
+# Background
+exec feh --bg-scale ~/.wallpaper
