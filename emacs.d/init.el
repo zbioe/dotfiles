@@ -1,10 +1,8 @@
-;; find all installed packages and activate them
-(package-initialize)
-
+;; global configs
 (menu-bar-mode -1) ; remove menu bar
 ;; (global-font-lock-mode 0) ; remove color
 
-;; some graphic configs
+;; graphic configs for x mode
 (defun graphic-config (&optional frame)
   (unless frame                                                 
     (setq frame (selected-frame)))
