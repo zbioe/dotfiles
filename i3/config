@@ -175,10 +175,10 @@ bar {
 # No border
 for_window [class="^.*"] border pixel 0
 
-# Pulse Audio controls
-bindsym $mod+Shift+s exec --no-startup-id amixer set Master 10%+ # increase sound volume
-bindsym $mod+Shift+a exec --no-startup-id amixer set Master 10%- # decrease sound volume
-bindsym $mod+Shift+m exec --no-startup-id amixer set Master toggle # mute sound
+# Audio control
+bindsym $mod+Shift+s exec --no-startup-id pactl set-sink-volume 0 +5% # increase sound volume
+bindsym $mod+Shift+a exec --no-startup-id pactl set-sink-volume 0 -5% # decrease sound volume
+bindsym $mod+Shift+m exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
 bindsym $mod+Shift+p exec sudo -E brightnessctl set +5% # increase screen brightness
