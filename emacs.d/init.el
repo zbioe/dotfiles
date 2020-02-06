@@ -1,6 +1,7 @@
 ;; global configs
 (menu-bar-mode -1) ; remove menu bar
 ;; (global-font-lock-mode 0) ; remove color
+;; (global-linum-mode 1) ;; add numbers
 
 ;; graphic configs for x mode
 (defun graphic-config (&optional frame)
@@ -18,17 +19,11 @@
 
 (setq vc-follow-symlinks t) ; Allways follow the links
 
-;; Remove startup message
-(custom-set-variables
- '(inhibit-startup-screen t))
-(custom-set-faces
- )
-
-;; Theme
-(load-theme 'dichromacy)
-
 ;; Package
 (load-file "~/.emacs.d/packages.el")
+
+;; Theme
+(load-theme 'dracula t)
 
 ;; Some changes in default keys
 (global-set-key (kbd "C-?") 'help-command)
@@ -81,3 +76,11 @@
 
 (global-set-key (kbd "C-c w") 'copy-to-clipboard)
 (global-set-key (kbd "C-c y") 'paste-from-clipboard)
+
+;; go config
+
+(setq gofmt-command "goimports")
+(add-hook 'before-save-hook 'gofmt-before-save)
+
+;; merge tool
+(setq smerge-command-prefix "\C-cv")

@@ -10,6 +10,11 @@
 
 ;; list of packages to install
 (setq package-list '(
+
+        dracula-theme
+
+	smerge-mode
+
 	markdown-mode
 
 	dockerfile-mode
