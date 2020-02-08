@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Make sure dgraph folder is created 
+mkdir -p ~/dgraph
+
+# trap stopDgraph function to run when ctrl+c is pressed
+trap stopDgraph INT
+stopDgraph() {
+	docker stop $pid 1> /dev/null
+	exit
+}
+
+# Run dgraphzero
+pid=$(docker run -d --rm -it \
+       -p 5080:5080 -p 6080:6080 -p 8080:8080 -p 9080:9080 -p 8000:8000 \
+       -v ~/dgraph:/dgraph --name dgraph dgraph/dgraph dgraph zero)
+
+# Run dgraph
+docker exec -d -it dgraph dgraph alpha --lru_mb 2048 --zero localhost:5080
+
+# Run ratel (Dgraph UI)
+docker exec -d -it dgraph dgraph-ratel
+
+echo Dgraph Alpha: :8080
+echo Dgraph Ratel: :8000
+
+while true; do
+      sleep 100
+done
+
