@@ -193,5 +193,17 @@ assign [class="Firefox"] $ws6
 assign [class="Steam"] $ws9
 
 
-# Background
+# Set wallpaper
 exec feh --bg-scale ~/.wallpaper
+
+# Super tab for next workspace
+bindsym Mod4+Tab workspace next
+
+# Super tab for previous workspace
+bindsym Mod4+Shift+Tab workspace prev
+
+# Alt tab for right windows
+bindsym Mod1+Tab focus right
+
+# Alt tab for left windows
+bindsym Mod1+Shift+Tab focus left
