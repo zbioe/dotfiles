@@ -19,21 +19,13 @@
 
 	dockerfile-mode
 
-	elixir-mode
-	alchemist
-
 	zeal-at-point
 
 	python-mode
 
 	fish-mode
 
-	erlang
-
 	go-mode
-
-	haskell-mode
-	hindent
 	))
 
 ;; activate all the packages
