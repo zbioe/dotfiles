@@ -78,6 +78,14 @@
 (global-set-key (kbd "C-c y") 'paste-from-clipboard)
 
 ;; go config
+;; godef: $ go get github.com/rogpeppe/godef
+;; goimports: $ go get golang.org/x/tools/cmd/goimports
+(defun go-mode-hook ()
+  
+  )
+
+(autoload 'go-mode "go-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
