@@ -20,6 +20,7 @@ set  -x PATH $PATH $HOME/.local/bin
 
 # export user bin
 set -x PATH $PATH $HOME/bin
+set -x PATH $PATH $HOME/pbin
 
 # export goroot
 set -x GOROOT $HOME/goroot
