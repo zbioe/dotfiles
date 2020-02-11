@@ -36,6 +36,9 @@ set -x PATH $PATH $GOBIN
 # export terminal
 set -x TERMINAL st
 
+# export editor
+set -x EDITOR emacs
+
 # export flutter
 set -x PATH $PATH $HOME/flutter/bin
 
