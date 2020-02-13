@@ -2,7 +2,6 @@
 
 if pgrep tmux
     st -e tmux a
-    exit 0
+else
+    st -e tmux
 end
-st -e tmux
-exit 0
