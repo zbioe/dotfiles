@@ -2,7 +2,7 @@
 
 ## Requirements
 
-make emacs tmux i3 slock i3status dmenu xsel feh fish-shell 
+make emacs st tmux i3 slock i3status dmenu xsel feh fish-shell 
 
 ## Clone
 ```sh
