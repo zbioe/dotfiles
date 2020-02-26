@@ -10,19 +10,21 @@ stopDgraph() {
 	exit
 }
 
-# Run dgraphzero
+# Run dgraph zero
 pid=$(docker run -d --rm -it \
        -p 5080:5080 -p 6080:6080 -p 8080:8080 -p 9080:9080 -p 8000:8000 \
        -v ~/dgraph:/dgraph --name dgraph dgraph/dgraph dgraph zero)
 
-# Run dgraph
+# Run dgraph alpha
 docker exec -d -it dgraph dgraph alpha --lru_mb 2048 --zero localhost:5080
 
 # Run ratel (Dgraph UI)
 docker exec -d -it dgraph dgraph-ratel
 
-echo Dgraph Alpha: :8080
-echo Dgraph Ratel: :8000
+echo Dgraph Alpha: http://localhost:8080
+echo Dgraph Ratel: http://localhost:8000
+echo
+echo Press Ctrl+C to stop...
 
 while true; do
       sleep 100
