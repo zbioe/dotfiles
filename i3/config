@@ -190,7 +190,7 @@ assign [class="Emacs"] $ws1
 assign [class="st-256color"] $ws0
 assign [class="Chromium"] $ws2
 assign [class="Firefox"] $ws6
-assign [class="Steam"] $ws9
+assign [class="Poddr"] $ws9
 
 
 # Set wallpaper
