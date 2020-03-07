@@ -189,6 +189,7 @@ bindsym $mod+Shift+o exec sudo -E brightnessctl set 5%- # decrease screen bright
 assign [class="Emacs"] $ws1
 assign [class="st-256color"] $ws0
 assign [class="Chromium"] $ws2
+assign [class="okular"] $ws2
 assign [class="Firefox"] $ws6
 assign [class="Poddr"] $ws9
 
