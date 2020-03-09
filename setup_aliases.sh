@@ -10,7 +10,6 @@ make_link(){
 }
 
 make_link $(pwd)/tmux.conf ~/.tmux.conf
-make_link $(pwd)/emacs.d ~/.emacs.d
 make_link $(pwd)/gitignore ~/.gitignore
 make_link $(pwd)/gitconfig ~/.gitconfig
 make_link $(pwd)/i3 ~/.config/i3
