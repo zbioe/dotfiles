@@ -9,6 +9,8 @@ make_link(){
     ln -sf $src $dest
 }
 
+mkdir -p ${HOME}/.config
+
 make_link $(pwd)/tmux.conf ~/.tmux.conf
 make_link $(pwd)/gitignore ~/.gitignore
 make_link $(pwd)/gitconfig ~/.gitconfig
