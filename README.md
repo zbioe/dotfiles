@@ -2,7 +2,7 @@
 
 ## Requirements
 
-make emacs st tmux i3 slock i3status dmenu xsel feh fish-shell
+make emacs st tmux i3 slock i3status dmenu xsel feh fish-shell brightnessctl
 
 ## Clone
 ```sh
