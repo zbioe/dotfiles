@@ -40,6 +40,9 @@ set -x TERMINAL st
 # export editor
 set -x EDITOR "ee"
 
+# export browser
+set -x BROWSER "chromium"
+
 # export flutter
 set -x PATH $PATH $HOME/flutter/bin
 
