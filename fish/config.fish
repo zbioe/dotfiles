@@ -3,7 +3,7 @@ set fish_greeting
 
 # auto start x on login
 if status is-login
-    if test -z "$DISPLAY" -a $XDG_VTNR = 1
+    if test -z "$DISPLAY" -a (fgconsole) = 1
         exec startx -- -keeptty
     end
 end
@@ -44,7 +44,10 @@ set -x EDITOR "ee"
 set -x BROWSER "chromium"
 
 # export flutter
-set -x PATH $PATH $HOME/flutter/bin
+set -x PATH $PATH $HOME/flutter/binb
+
+# export gcproot
+set -x PATH $PATH $HOME/gcproot/bin
 
 # export android studio
 set -x PATH $PATH $HOME/android-studio/bin
