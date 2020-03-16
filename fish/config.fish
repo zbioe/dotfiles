@@ -3,7 +3,7 @@ set fish_greeting
 
 # auto start x on login
 if status is-login
-    if test -z "$DISPLAY" -a (fgconsole) = 1
+    if test -z "$DISPLAY" -a (fgconsole 2>/dev/null || echo -1) = 1
         exec startx -- -keeptty
     end
 end
