@@ -1,2 +1,2 @@
-setup_aliases:
-	./setup_aliases.sh
+links:
+	./setup_links.sh

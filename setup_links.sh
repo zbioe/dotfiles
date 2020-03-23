@@ -21,4 +21,4 @@ make_link $(pwd)/bin ~/bin
 make_link $(pwd)/gtk-3.0 ~/.config/gtk-3.0
 make_link $(pwd)/gtkrc-2.0 ~/.gtkrc-2.0
 
-echo "aliases created"
+echo "links created"
