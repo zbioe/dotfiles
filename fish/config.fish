@@ -8,6 +8,9 @@ if status is-login
     end
 end
 
+# export default pager
+set -x PAGER cat
+
 # fix term color inside tmux
 set -x TERM screen-256color
 
@@ -46,7 +49,7 @@ set -x BROWSER "chromium"
 # export flutter
 set -x PATH $PATH $HOME/flutter/binb
 
-# export gcproot
+# export gcp sdk
 set -x PATH $PATH $HOME/gcproot/bin
 
 # export android studio
