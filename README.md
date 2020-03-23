@@ -1,5 +1,7 @@
 # Dotfiles
 
+Set of links for used softwares config
+
 ## Requirements
 
 make emacs st tmux i3 slock i3status dmenu xsel feh fish-shell brightnessctl
@@ -9,8 +11,8 @@ make emacs st tmux i3 slock i3status dmenu xsel feh fish-shell brightnessctl
 git clone ssh://git@github.com/iuryfukuda/dotfiles
 ```
 
-## Setup Aliases
+## Setup Links
 
 ```sh
-make setup_aliases
+make links
 ```
