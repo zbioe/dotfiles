@@ -47,7 +47,7 @@ set -x EDITOR "ee"
 set -x BROWSER "chromium"
 
 # export flutter
-set -x PATH $PATH $HOME/flutter/binb
+set -x PATH $PATH $HOME/flutter/bin
 
 # export gcp sdk
 set -x PATH $PATH $HOME/gcproot/bin
