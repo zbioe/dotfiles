@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+must_up() {
+    pgrep $1 1>/dev/null || $1 &
+}
+
+# make sure fontsrv and plumber are started
+must_up fontsrv
+must_up plumber
+
+acme -f '/mnt/font/GoMono/13a/font' $@
