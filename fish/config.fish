@@ -8,14 +8,14 @@ if status is-login
     end
 end
 
-# export default pager
-set -x PAGER cat
+# export pager
+set -x PAGER less
 
 # fix term color inside tmux
 set -x TERM screen-256color
 
 # export plan9
-set -x PLAN9 /usr/local/plan9
+set -x PLAN9 /usr/lib/plan9
 set -x PATH $PATH $PLAN9/bin
 
 # export python home bin
