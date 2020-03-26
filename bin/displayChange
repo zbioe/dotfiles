@@ -2,8 +2,8 @@
 
 hdmi_status=$(cat /sys/class/drm/card0/card0-HDMI-A-1/status)
 
-hdmi_only_cmd="xrandr --output eDP-1 --off --output HDMI-1 --mode 2560x1080 --pos 0x0 --rotate normal"
-edpi_only_cmd="xrandr --output eDP-1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output HDMI-1 --off"
+hdmi_only_cmd="xrandr --output eDP1 --off --output HDMI1 --mode 2560x1080 --pos 0x0 --rotate normal"
+edpi_only_cmd="xrandr --output eDP1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output HDMI1 --off"
 
 if test "$hdmi_status" = "connected"; then
     $($hdmi_only_cmd)
