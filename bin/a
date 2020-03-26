@@ -10,4 +10,8 @@ must_up() {
 must_up fontsrv
 must_up plumber
 
+# set default envs
+export SHELL=/bin/bash
+export PAGER=cat
+
 acme -f '/mnt/font/GoMono/13a/font' $@
