@@ -15,7 +15,13 @@ set -x PAGER less
 set -x TERM screen-256color
 
 # export plan9
-set -x PLAN9 /usr/lib/plan9
+if test -d /usr/local/plan9
+   # if compiled manually
+   set -x PLAN9 /usr/local/plan9
+else
+   # if from package manager
+   set -x PLAN9 /usr/lib/plan9
+end
 set -x PATH $PATH $PLAN9/bin
 
 # export python home bin
