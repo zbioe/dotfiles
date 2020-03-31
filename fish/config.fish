@@ -11,9 +11,6 @@ end
 # export pager
 set -x PAGER less
 
-# fix term color inside tmux
-set -x TERM screen-256color
-
 # export plan9
 if test -d /usr/local/plan9
    # if compiled manually
