@@ -19,6 +19,7 @@ make_link $(pwd)/i3status ~/.config/i3status
 make_link $(pwd)/fish ~/.config/fish
 make_link $(pwd)/bin ~/bin
 make_link $(pwd)/gtk-3.0 ~/.config/gtk-3.0
-make_link $(pwd)/gtkrc-2.0 ~/.gtkrc-2.0
+make_link $(pwd)/gtkrc-2.0 ~/.gtkrc-2
+make_link $(pwd)/alacritty ~/.config/alacritty
 
 echo "links created"

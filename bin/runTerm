@@ -1,7 +1,0 @@
-#!/usr/bin/env fish
-
-if pgrep tmux
-    alacritty -e tmux a
-else
-    alacritty -e tmux new -s main
-end
