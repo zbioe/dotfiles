@@ -1,7 +1,5 @@
 font:
   size: 9
-  family: Go-Mono
-  style: Mono
 
 shell:
   program: /usr/bin/fish
