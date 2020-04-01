@@ -6,4 +6,4 @@ shell:
   args:
     - --login
     - -c
-    - 'tmux attach -t main || tmux new -s main'
+    - 'tmux attach -t main 2>/dev/null || tmux new -s main'
