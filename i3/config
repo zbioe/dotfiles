@@ -191,6 +191,8 @@ bindsym --release $mod+Shift+d exec ~/pbin/displayChange
 # finds out, if available)
 bar {
         status_command i3status
+	mode hide
+	output $mt1
 }
 
 # No border
