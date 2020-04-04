@@ -193,15 +193,20 @@ bar {
         status_command i3status
 	mode hide
 	output $mt1
+	modifier $mod
+	colors {
+	       background #3b0ba0
+	       statusline #babaca
+	}
 }
 
 # No border
 for_window [class="^.*"] border pixel 0
 
 # Audio control
-bindsym $mod+Shift+s exec --no-startup-id pactl set-sink-volume 0 +5% # increase sound volume
-bindsym $mod+Shift+a exec --no-startup-id pactl set-sink-volume 0 -5% # decrease sound volume
-bindsym $mod+Shift+m exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym $mod+Shift+s exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% # increase sound volume
+bindsym $mod+Shift+a exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% # decrease sound volume
+bindsym $mod+Shift+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound0
 
 # Sreen brightness controls
 bindsym $mod+Shift+p exec sudo -E brightnessctl set +5% # increase screen brightness
