@@ -191,13 +191,10 @@ bindsym --release $mod+Shift+d exec ~/pbin/displayChange
 # finds out, if available)
 bar {
         status_command i3status
-	mode hide
+	mode dock
 	output $mt1
 	modifier $mod
-	colors {
-	       background #3b0ba0
-	       statusline #babaca
-	}
+
 }
 
 # No border
