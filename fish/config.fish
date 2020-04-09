@@ -57,3 +57,6 @@ set -x PATH $PATH $HOME/gcproot/bin
 
 # export android studio
 set -x PATH $PATH $HOME/android-studio/bin
+
+# export gcp sdk
+set -x PATH $PATH $HOME/google-cloud-sdk/bin
