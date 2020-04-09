@@ -43,28 +43,28 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+Ctrl+f focus right
+bindsym $mod+Ctrl+b focus left
+bindsym $mod+Ctrl+p focus up
+bindsym $mod+Ctrl+n focus down
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Up focus up
+bindsym $mod+Down focus down
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Ctrl+Shift+f move right
+bindsym $mod+Ctrl+Shift+b move left
+bindsym $mod+Ctrl+Shift+n move down
+bindsym $mod+Ctrl+Shift+p move up
 
 # alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Right move right
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -182,7 +182,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # screen locker
-bindsym --release $mod+Shift+b exec slock
+bindsym --release $mod+Shift+x exec slock
 
 # display check
 bindsym --release $mod+Shift+d exec ~/pbin/displayChange
