@@ -60,3 +60,6 @@ set -x PATH $PATH $HOME/android-studio/bin
 
 # export gcp sdk
 set -x PATH $PATH $HOME/google-cloud-sdk/bin
+
+# export krew
+set -gx PATH $PATH $HOME/.krew/bin
