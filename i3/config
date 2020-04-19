@@ -211,8 +211,8 @@ bindsym $mod+Shift+o exec sudo -E brightnessctl set 5%- # decrease screen bright
 
 
 # Assign class to workspace
-assign [class="Emacs"] $ws1
 assign [class="Alacritty"] $ws0
+assign [class="Emacs"] $ws1
 assign [class="Chromium"] $ws2
 assign [class="okular"] $ws3
 assign [class="Firefox"] $ws6
