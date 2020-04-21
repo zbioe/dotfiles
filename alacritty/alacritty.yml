@@ -29,7 +29,7 @@ colors:
     
 
 font:
-  size: 9
+  size: 12
 
 shell:
   program: /usr/bin/fish
