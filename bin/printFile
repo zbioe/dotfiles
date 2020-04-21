@@ -1,2 +1,0 @@
-#!/bin/sh
-lp -o fit-to-page $@
