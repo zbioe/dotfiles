@@ -14,5 +14,5 @@ git clone ssh://git@github.com/iuryfukuda/dotfiles
 ## Setup Links
 
 ```sh
-make links
+make setup_links
 ```
