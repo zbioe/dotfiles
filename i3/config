@@ -215,7 +215,7 @@ assign [class="Emacs"] $ws1
 assign [class="Chromium"] $ws2
 assign [class="okular"] $ws3
 assign [class="Firefox"] $ws6
-assign [class="Poddr"] $ws9
+assign [class="Poddr"] $ws8
 
 
 # Set wallpaper
