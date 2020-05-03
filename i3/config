@@ -120,8 +120,7 @@ workspace $ws5 output $mt1
 workspace $ws6 output $mt1
 workspace $ws7 output $mt1
 workspace $ws8 output $mt1
-workspace $ws9 output $mt1
-
+workspace $ws9 output $mt2
 
 # switch to workspace
 bindsym $mod+0 workspace $ws0
@@ -216,7 +215,7 @@ assign [class="Emacs"] $ws1
 assign [class="Chromium"] $ws2
 assign [class="okular"] $ws3
 assign [class="Firefox"] $ws6
-assign [class="Poddr"] $ws9
+assign [class="Poddr"] $ws8
 
 
 # Set wallpaper
