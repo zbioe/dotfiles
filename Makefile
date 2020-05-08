@@ -1,2 +1,3 @@
+.PHONY: setup_links
 setup_links:
-	./setup_links.sh
+	./setup_links

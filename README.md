@@ -14,9 +14,9 @@ git clone ssh://git@github.com/zbioe/dotfiles
 ## Setup Links
 
 ```sh
-./setup_links.sh
+./setup_links
 ```
-
+or
 ```sh
 make setup_links
 ```
