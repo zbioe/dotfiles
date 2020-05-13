@@ -41,7 +41,7 @@ set -x GOBIN $HOME/gobin
 set -x PATH $PATH $GOBIN
 
 # export terminal
-set -x TERMINAL st
+set -x TERMINAL alacritty
 
 # export editor
 set -x EDITOR "ee"
