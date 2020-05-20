@@ -1,3 +1,5 @@
+## Defaults
+
 # unset fish greeting
 set fish_greeting
 
@@ -7,6 +9,11 @@ if status is-login
         exec startx -- -keeptty
     end
 end
+
+## Binds
+bind \eh 'backward-kill-bigword'
+
+## Exports
 
 # export pager
 set -x PAGER less
