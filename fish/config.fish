@@ -44,7 +44,7 @@ set -x PATH $PATH $GOBIN
 set -x TERMINAL alacritty
 
 # export editor
-set -x EDITOR "ee"
+set -x EDITOR "ei"
 
 # export browser
 set -x BROWSER "chromium"

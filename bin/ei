@@ -1,7 +1,12 @@
 #!/bin/sh
+
+# Must have emacs daemon up
+ps -e -o args | grep -qE 'emacs --(bg-|)daemon' || emacs --daemon
+
+# Check if have any frame up in emacs
 emacsclient -n -e "(if (> (length (frame-list)) 1) 't)" | grep -q t
-if [ "$?" = "1" ]; then
-    emacsclient -c -n -a "" "$@"
+if [ $? = 1 ]; then
+    ef $@
 else
-    emacsclient -n -a "" "$@"
+    e $@
 fi
