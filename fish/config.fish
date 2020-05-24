@@ -52,6 +52,7 @@ set -x TERMINAL alacritty
 
 # export editor
 set -x EDITOR "ei"
+set -x VISUAL "ei"
 
 # export browser
 set -x BROWSER "chromium"
