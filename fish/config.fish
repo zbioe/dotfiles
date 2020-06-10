@@ -71,6 +71,9 @@ set -x PATH $PATH $HOME/google-cloud-sdk/bin
 
 # export krew
 set -x PATH $PATH $HOME/.krew/bin
+
 # export cask
 set -x PATH $PATH $HOME/.cask/bin
+
+# export textlive (pdflatex)
 set -x PATH $PATH /opt/texlive/2020/bin/x86_64-linux
