@@ -1,0 +1,19 @@
+#!/bin/bash
+
+importAllYamls() {
+  for f in $(ls *.yaml 2>/dev/null)
+  do
+    echo "- $f" >> /dev/stderr
+    kubectl apply -f $f
+  done
+}
+
+basedir=$(pwd)
+echo "." > /dev/stderr
+importAllYamls
+for d in $(ls -d */ 2>/dev/null); do
+  cd $d
+  echo "$d" >> /dev/stderr
+  importAllYamls
+  cd $basedir
+done
