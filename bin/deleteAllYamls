@@ -1,0 +1,19 @@
+#!/bin/bash
+
+deleteAllYamls() {
+  for f in $(ls *.yaml 2>/dev/null)
+  do
+    echo "- $f" >> /dev/stderr
+    kubectl delete -f $f
+  done
+}
+
+basedir=$(pwd)
+echo "." > /dev/stderr
+deleteAllYamls
+for d in $(ls -d */ 2>/dev/null); do
+  cd $d
+  echo "$d" >> /dev/stderr
+  deleteAllYamls
+  cd $basedir
+done
