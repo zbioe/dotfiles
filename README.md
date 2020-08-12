@@ -1,6 +1,6 @@
 # Dotfiles
 
-Set of links for used softwares config
+Personal dotfiles, is created an link in $HOME for each item inside this folder
 
 ## Requirements
 
