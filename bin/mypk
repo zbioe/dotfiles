@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -ue
+
+cmd='cat ~/.ssh/id_rsa.pub | xsel -bi'
+echo $cmd
+eval $cmd
