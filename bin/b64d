@@ -1,0 +1,5 @@
+#!/bin/sh
+
+raw=$(echo -n $@ | base64 -d)
+echo $raw | xsel -bi
+echo $raw
