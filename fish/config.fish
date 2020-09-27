@@ -77,3 +77,13 @@ set -x PATH $PATH $HOME/.cask/bin
 
 # export textlive (pdflatex)
 set -x PATH $PATH /opt/texlive/2020/bin/x86_64-linux
+
+# export java oracle jdk
+set -x PATH $PATH /opt/java/jdk1.8.0_261/bin
+
+# set default print screen
+set -x PRS_FP $HOME/Images/lala.png
+
+# export ghcup
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
+test -f $HOME/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin $HOME/.ghcup/bin $PATH
