@@ -230,5 +230,6 @@ bindsym Mod4+Shift+Tab workspace prev
 
 # # Alt tab for left windows
 # bindsym $mod+Shift+Tab focus left
+
 bindsym --release Print exec scrot -s $HOME/Images/prs/part.png
 bindsym --release $mod+Print exec scrot $HOME/Images/prs/full.png
