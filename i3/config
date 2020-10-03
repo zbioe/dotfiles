@@ -217,6 +217,7 @@ assign [class="Poddr"] $ws8
 
 # Set wallpaper
 exec_always feh --bg-scale ~/.wallpaper
+exec_always  ~/pbin/displayChange
 
 # Super tab for next workspace
 bindsym Mod4+Tab workspace next
