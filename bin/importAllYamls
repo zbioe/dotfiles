@@ -1,5 +1,12 @@
 #!/bin/bash
 
+nNodes=(kubectl get nodes | wc -l)
+if [ $nNodes -gt 6 ]; then
+	echo "ERROR: PROD cluster"
+	echo "exiting ..."
+	exit 1
+fi
+
 importAllYamls() {
   for f in $(ls *.yaml 2>/dev/null)
   do
