@@ -1,0 +1,7 @@
+#!/bin/sh
+# Print screen in some filename passed as parameter or env
+
+set -eu
+
+filepath=${1:-$PRS_FP}
+scrot -s $filepath
