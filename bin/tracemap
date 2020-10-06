@@ -1,0 +1,7 @@
+#!/bin/bash
+
+function traceroute-mapper {
+  xdg-open "https://stefansundin.github.io/traceroute-mapper/?trace=$(traceroute -q1 $* | sed ':a;N;$!ba;s/\n/%0A/g')"
+}
+
+traceroute-mapper $@
