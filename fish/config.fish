@@ -87,3 +87,18 @@ set -x PRS_FP $HOME/Images/lala.png
 # export ghcup
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 test -f $HOME/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin $HOME/.ghcup/bin $PATH
+
+# emacs bin
+set -x PATH $PATH $HOME/.emacs.d/bin
+
+# Nix
+set -x NIX_LINK $HOME/.nix-profile
+
+## Set up environment.
+## This part should be kept in sync with nixpkgs:nixos/modules/programs/environment.nix
+set -x NIX_PROFILES "/nix/var/nix/profiles/default $HOME/.nix-profile"
+
+## Set $NIX_SSL_CERT_FILE so that Nixpkgs applications like curl work.
+set -x NIX_SSL_CERT_FILE /etc/ssl/certs/ca-certificates.crt
+
+set -x PATH $NIX_LINK/bin $PATH
