@@ -5,6 +5,10 @@ colors:
     background: '0xfafafa'
     foreground: '0x212121'
 
+  cursor:
+    text:   '0xfafafa'
+    cursor: '0xFF5722'
+
   # Normal colors
   normal:
     black:   '0x212121'
@@ -17,7 +21,6 @@ colors:
     white:   '0xfafafa'
 
   # Bright colors
-  
   bright:
     black:   '0xff262b'
     red:     '0xb71c1c'
