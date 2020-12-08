@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+/home/pirata/lib/azure-cli/bin/python -m azure.cli "$@"

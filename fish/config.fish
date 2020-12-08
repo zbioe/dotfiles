@@ -102,3 +102,4 @@ set -x NIX_PROFILES "/nix/var/nix/profiles/default $HOME/.nix-profile"
 set -x NIX_SSL_CERT_FILE /etc/ssl/certs/ca-certificates.crt
 
 set -x PATH $NIX_LINK/bin $PATH
+starship init fish | source

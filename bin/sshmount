@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -ue
+
+host=$1
+user=$2
+service=${3:-$user}
+args=${4:-""}
+
+mountdir=/data/$host/$service
+
+mkdir -p $mountdir
+
+sshfs $args $host:/etc/$service $mountdir -o sftp_server="/usr/bin/sudo -u $user /usr/lib/openssh/sftp-server"

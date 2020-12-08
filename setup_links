@@ -24,6 +24,6 @@ make_link $(pwd)/gtkrc-2.0 ~/.gtkrc-2
 make_link $(pwd)/alacritty ~/.config/alacritty
 make_link $(pwd)/hunspell_pt_BR ~/.hunspell_pt_BR
 make_link $(pwd)/hunspell_en_US ~/.hunspell_en_US
-make_link $(pwd)/startship.toml ~/.config/startship.toml
+make_link $(pwd)/starship.toml ~/.config/starship.toml
 
 echo "finished: links created"
