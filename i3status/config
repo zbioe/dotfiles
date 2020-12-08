@@ -4,8 +4,6 @@ general {
         interval = 5
 }
 
-order += "ipv6"
-order += "wireless wlp3s0"
 order += "ethernet enp2s0"
 order += "disk /"
 order += "battery 1"
