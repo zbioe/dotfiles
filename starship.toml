@@ -24,4 +24,5 @@ disabled=true
 [memory_usage]
 disabled = false
 
-
+[battery]
+disabled = true
