@@ -23,8 +23,8 @@ main = do
         , terminal = "alacritty"
         } `additionalKeys`
         [ ((mod4Mask .|. shiftMask, xK_z), spawn "slock")
-        , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
+        , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s Screenshots/%b%d::%H%M%S.png")
         , ((mod4Mask, xK_a), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
         , ((mod4Mask, xK_s), spawn "pactl set-sink-volume @DEFAULT_SINK@ -5%")
         , ((mod4Mask, xK_d), spawn "pactl set-sink-volume @DEFAULT_SINK@ +5%")
-        , ((0, xK_Print), spawn "scrot")]
+        , ((0, xK_Print), spawn "scrot Screenshots/%b%d::%H%M%S.png")]
