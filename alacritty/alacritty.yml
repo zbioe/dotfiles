@@ -35,7 +35,7 @@ font:
   size: 15
 
 shell:
-  program: /usr/bin/fish
+  program: /nix/store/pn5abfaxia7xryyxhvccz70fwn3094qd-system-path/bin/fish
   args:
     - --login
     - -c
