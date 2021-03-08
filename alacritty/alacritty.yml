@@ -35,8 +35,10 @@ font:
   size: 15
 
 shell:
-  program: /nix/store/pn5abfaxia7xryyxhvccz70fwn3094qd-system-path/bin/fish
+  program: tmux
   args:
-    - --login
-    - -c
-    - tmux attach -t main 2>/dev/null || tmux -2 new -s main
+    - new-session
+    - -A
+    - -D
+    - -s
+    - main
