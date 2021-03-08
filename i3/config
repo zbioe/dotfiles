@@ -114,10 +114,10 @@ set $ws9 "9"
 workspace $ws0 output $mt2
 workspace $ws1 output $mt2
 workspace $ws2 output $mt1
-workspace $ws3 output $mt1
+workspace $ws3 output $mt2
 workspace $ws4 output $mt1
 workspace $ws5 output $mt1
-workspace $ws6 output $mt1
+workspace $ws6 output $mt2
 workspace $ws7 output $mt1
 workspace $ws8 output $mt1
 workspace $ws9 output $mt2
@@ -210,10 +210,11 @@ bindsym $mod+Shift+o exec sudo -E brightnessctl set 5%- # decrease screen bright
 # Assign class to workspace
 assign [class="Alacritty"] $ws0
 assign [class="Emacs"] $ws1
-# assign [class="Chromium"] $ws2
+assign [class="Chromium"] $ws2
 assign [class="okular"] $ws3
-assign [class="Firefox"] $ws6
+assign [class="Firefox"] $ws9
 assign [class="Poddr"] $ws8
+assign [class="Spotify"] $ws8
 
 # Set wallpaper
 exec_always feh --bg-scale ~/.wallpaper

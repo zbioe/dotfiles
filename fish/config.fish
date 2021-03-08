@@ -103,3 +103,7 @@ set -x NIX_SSL_CERT_FILE /etc/ssl/certs/ca-certificates.crt
 
 set -x PATH $NIX_LINK/bin $PATH
 starship init fish | source
+
+set -x PATH $NIX_LINK/bin $PATH
+
+set -x PATH $HOME/.cargo/bin $PATH
