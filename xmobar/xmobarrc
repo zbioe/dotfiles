@@ -1,4 +1,4 @@
-Config { font = "-*-Fixed-Bold-R-Normal-*-18-*-*-*-*-*-*-*"
+Config { font = "xft:Go Mono:size=14:regular:antialias=true"
         , borderColor = "black"
         , border = TopB
         , bgColor = "black"
