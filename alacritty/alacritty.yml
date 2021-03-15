@@ -1,35 +1,35 @@
-# Colors (Material Theme Light)
+# Colors (PaperColor - Light)
 colors:
   # Default colors
   primary:
-    background: '0xfafafa'
-    foreground: '0x212121'
+    background: '0xeeeeee'
+    foreground: '0x878787'
 
   cursor:
-    text:   '0xfafafa'
-    cursor: '0xFF5722'
+    text: '0xeeeeee'
+    cursor: '0x878787'
 
   # Normal colors
   normal:
-    black:   '0x212121'
-    red:     '0xb71c1c'
-    green:   '0x558b2f'
-    yellow:  '0xffa000'
-    blue:    '0x2196f3'
-    magenta: '0x4527A0'
-    cyan:    '0x00796b'
-    white:   '0xfafafa'
+    black:   '0xeeeeee'
+    red:     '0xaf0000'
+    green:   '0x008700'
+    yellow:  '0x5f8700'
+    blue:    '0x0087af'
+    magenta: '0x878787'
+    cyan:    '0x005f87'
+    white:   '0x444444'
 
   # Bright colors
   bright:
-    black:   '0xff262b'
-    red:     '0xb71c1c'
-    green:   '0x558b2f'
-    yellow:  '0xffa000'
-    blue:    '0x2196f3'
-    magenta: '0xff2f90'
-    cyan:    '0x00796b'
-    white:   '0xfafafa'
+    black:   '0xbcbcbc'
+    red:     '0xd70000'
+    green:   '0xd70087'
+    yellow:  '0x8700af'
+    blue:    '0xd75f00'
+    magenta: '0xd75f00'
+    cyan:    '0x005faf'
+    white:   '0x005f87'
 
 font:
   size: 15

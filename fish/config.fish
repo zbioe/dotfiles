@@ -107,3 +107,5 @@ starship init fish | source
 set -x PATH $NIX_LINK/bin $PATH
 
 set -x PATH $HOME/.cargo/bin $PATH
+
+set -x LD_PRELOAD /data/libhostspriv.so

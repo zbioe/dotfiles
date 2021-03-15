@@ -21,6 +21,7 @@ main = do
                         }
         , modMask = mod4Mask     -- Rebind Mod to the Windows key
         , terminal = "alacritty"
+        , startupHook = spawn "~/pbin/displayChange"
         } `additionalKeys`
         [ ((mod4Mask .|. shiftMask, xK_z), spawn "slock")
         , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s Screenshots/%b%d::%H%M%S.png")

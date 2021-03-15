@@ -1,14 +1,17 @@
 #!/bin/sh
 
-set -ue
+set -uex
 
 host=$1
 user=$2
-service=${3:-$user}
+mountpoint=${3:-$user}
 args=${4:-""}
 
-mountdir=/data/$host/$service
+mountdir=/data/$host
+if [ $mountpoint != "/" ]; then
+  mountdir=/data/$host/$mountpoint
+fi
 
 mkdir -p $mountdir
 
-sshfs $args $host:/etc/$service $mountdir -o sftp_server="/usr/bin/sudo -u $user /usr/lib/openssh/sftp-server"
+sshfs $args $host:$mountpoint $mountdir -o sftp_server="/usr/bin/sudo -u $user /usr/lib/openssh/sftp-server"
